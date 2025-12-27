@@ -13,65 +13,206 @@
     <meta charset="UTF-8">
     <title>Reading</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', sans-serif;
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-            color: white;
-        }
+  <style>
+/* ===== ROOT COLORS ===== */
+:root {
+    --primary: #1e88e5;
+    --secondary: #9c27b0;
+    --accent: #ff9800;
+}
 
-        nav {
-            background: #0a1a2f;
-            padding: 15px;
-            text-align: center;
-        }
+/* ===== BODY ===== */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 20px;
-        }
+/* ===== NAVBAR ===== */
+nav {
+    background: linear-gradient(to right, #141e30, #243b55);
+    padding: 16px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
 
-        .content {
-            width: 80%;
-            margin: auto;
-            padding: 40px 0;
-            text-align: center;
-        }
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 22px;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 8px 14px;
+    border-radius: 20px;
+    transition: background 0.3s;
+}
+
+nav a:hover {
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+}
+
+/* ===== HEADER ===== */
+header {
+    background: linear-gradient(120deg, #1e3c72, #2a5298, #9c27b0);
+    color: white;
+    padding: 90px 20px 70px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 50px;
+    letter-spacing: 2px;
+}
+
+/* ===== CONTENT AREA ===== */
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 50px 0;
+}
+
+/* ===== IMAGE ROW (CENTERED) ===== */
+.image-row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 5px;
+}
+
 img {
             width: 300px;
             height: 250px;
             margin: 50px 0;
             
         }
-    </style>
+
+
+/* ===== POST CARDS (WHITE BOXES) ===== */
+.post {
+    background: white;
+    border-radius: 20px;
+    padding: 35px;
+    margin-bottom: 45px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.post:hover {
+    transform: translateY(-10px);
+}
+
+/* STAR ON RIGHT SIDE */
+.post::after {
+    content: "★";
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(to right, var(--accent), var(--secondary));
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.post:nth-of-type(odd) h2 {
+    color: #e91e63;   /* pink */
+}
+
+.post:nth-of-type(even) h2 {
+    color: #4caf50;   /* green */
+}
+.post h2 {
+    margin-top: 0;
+    font-size: 26px;
+}
+
+.date {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 12px;
+}
+
+.post p {
+    font-size: 16px;
+    line-height: 1.9;
+    color: #333;
+}
+</style>
+
+
 </head>
 
 <body>
 
 <nav>
-    <a href="blog.html">Home</a>
+    <a href="index.html">Home</a>
     <a href="music.html">Music</a>
     <a href="travel.html">Travel</a>
 <a href="reading.html">Reading</a>
 </nav>
-
 <div class="content">
-    <h1>Reading</h1>
 
-    <img src="9.jpg" >
-<img src="8.jpg" >
-<img src="7.jpg" >
-<p>
-Reading fiction offers an escape, letting us explore new worlds and lives, fostering empathy by living through character's experiences and sparking imagination with unique stories and perspectives, making it a deeply engaging form of entertainment that also sharpens our minds. 
-</p>
-<p>
-It is a way to vicariously experience adventures, learn about different cultures and find comfort in shared human emotions, all while relaxing. 
-</p>
-   
+<!-- Header -->
+<header>
+    <h1>Reading</h1>
+</header>
+
+<!-- CENTERED IMAGE ROW -->
+<div class="image-row">
+    <img src="9.jpg" alt="Reading image">
+    <img src="8.jpg" alt="Reading image">
+    <img src="7.jpg" alt="Reading image">
 </div>
+<!-- Blog Content -->
+<div class="container">
+<div class="post">
+<h2>A World Of My Own</h2>
+<p>
+Reading feels like stepping into a world that exists beyond reality, a space created entirely by imagination. It allows me to disconnect from the real world and immerse myself in stories filled with fantasy, thrill, adventure and experiences that could never happen in everyday life. Every book becomes a quiet escape, offering comfort and curiosity at the same time.
+</p>
+</div>
+<div class="post">
+<h2>Falling in Love With Fiction</h2>
+<p>
+Since my teenage years, I have been a devoted fan of the Harry Potter novels. The magic, imagination and emotional depth of the series made reading an unforgettable experience. The world-building was so captivating that it didn’t just tell a story, it made me live it, shaping my love for fictional worlds.
+</p>
+</div>
+<div class="post">
+<h2>Discovering The Classics</h2>
+<p>
+As I grew older, my reading journey expanded to classic literature. Works by Charles Dickens, especially Great Expectations and Oliver Twist, fascinated me with their storytelling, characters and social depth. These novels offered a different kind of richness, thought-provoking yet deeply engaging.
+</p>
+</div>
+<div class="post">
+<h2>Light Reads</h2>
+<p>
+During periods of stress, especially while preparing for competitive exams, light-hearted books became my refuge. Reading something fun and easy helped take my mind off pressure and deadlines. The Diary of a Wimpy Kid series is one such example, simple, humorous and comforting during overwhelming days.
+</p>
+</div>
+<div class="post">
+<h2>Reflection</h2>
+<p>
+I also enjoy philosophical and deeper novels that leave lasting impressions. The Alchemist is one such book that stood out, offering reflections on dreams, purpose and self-discovery. These stories don’t just entertain, they quietly stay with you long after you have finished reading.
+</p>
+</div>
+</div>
+  <div class="post">
+<h2>A Habit That Still Lives On</h2>
+<p>
+Although my reading habit has declined over the years due to busy schedules and fewer opportunities to explore new stories, it remains a pastime close to my heart. Even if I don’t read as much as I once did, the love for books, stories and imagined worlds has never truly faded, it is still a comfort I return to whenever I can.
+</p>
+</div>
+
 
 </body>
 </html>
+
 

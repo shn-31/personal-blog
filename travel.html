@@ -13,68 +13,200 @@
     <meta charset="UTF-8">
     <title>Travel</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', sans-serif;
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-            color: white;
-        }
+<style>
+/* ===== ROOT COLORS ===== */
+:root {
+    --primary: #1e88e5;
+    --secondary: #9c27b0;
+    --accent: #ff9800;
+}
 
-        nav {
-            background: #0a1a2f;
-            padding: 15px;
-            text-align: center;
-        }
+/* ===== BODY ===== */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 20px;
-        }
+/* ===== NAVBAR ===== */
+nav {
+    background: linear-gradient(to right, #141e30, #243b55);
+    padding: 16px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
 
-        .content {
-            width: 80%;
-            margin: auto;
-            padding: 40px 0;
-            text-align: center;
-        }
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 22px;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 8px 14px;
+    border-radius: 20px;
+    transition: background 0.3s;
+}
+
+nav a:hover {
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+}
+
+/* ===== HEADER ===== */
+header {
+    background: linear-gradient(120deg, #1e3c72, #2a5298, #9c27b0);
+    color: white;
+    padding: 90px 20px 70px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 50px;
+    letter-spacing: 2px;
+}
+
+/* ===== CONTENT AREA ===== */
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 50px 0;
+}
+
+/* ===== IMAGE ROW (CENTERED) ===== */
+.image-row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 5px;
+}
+
 img {
             width: 300px;
             height: 250px;
             margin: 50px 0;
             
         }
-    </style>
+
+
+/* ===== POST CARDS (WHITE BOXES) ===== */
+.post {
+    background: white;
+    border-radius: 20px;
+    padding: 35px;
+    margin-bottom: 45px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.post:hover {
+    transform: translateY(-10px);
+}
+
+/* STAR ON RIGHT SIDE */
+.post::after {
+    content: "★";
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(to right, var(--accent), var(--secondary));
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.post:nth-of-type(odd) h2 {
+    color: #e91e63;   /* pink */
+}
+
+.post:nth-of-type(even) h2 {
+    color: #4caf50;   /* green */
+}
+.post h2 {
+    margin-top: 0;
+    font-size: 26px;
+}
+
+.date {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 12px;
+}
+
+.post p {
+    font-size: 16px;
+    line-height: 1.9;
+    color: #333;
+}
+</style>
+
+
 </head>
 
 <body>
 
 <nav>
-    <a href="blog.html">Home</a>
+    <a href="index.html">Home</a>
     <a href="music.html">Music</a>
     <a href="travel.html">Travel</a>
 <a href="reading.html">Reading</a>
 </nav>
-
 <div class="content">
+
+<!-- Header -->
+<header>
     <h1>Travel</h1>
+</header>
 
-    <img src="5.jpg" >
-<img src="4.jpg" >
-<img src="6.jpg" >
+<!-- CENTERED IMAGE ROW -->
+<div class="image-row">
+    <img src="5.jpg" alt="Travel image">
+    <img src="4.jpg" alt="Travel image">
+    <img src="6.jpg" alt="Travel image">
+</div>
+<!-- Blog Content -->
+<div class="container">
+<div class="post">
+<h2>A Dream in Motion</h2>
 <p>
-Travel entertains by offering a joyful escape from routine, immersing us in new cultures and landscapes for memorable adventures 
-and fostering personal growth as we discover the world. 
+Travelling has always been more than just a hobby for me, it is a dream. The idea of exploring different countries, stepping into new cultures and experiencing life beyond familiar surroundings feels exciting and deeply fulfilling. Travel represents freedom, curiosity and the courage to explore the unknown.
 </p>
+</div>
+<div class="post">
+<h2>Exploring The World's Wonders</h2>
 <p>
-Exploring the world's wonders, from nature to ancient sites, brings immense happiness, calms the mind and allows for deep connections with loved ones. 
-It provides a break from daily monotony, letting us find freedom in new places, experience unique sights, sounds and tastes and create lasting memories.
+One of the most beautiful aspects of travelling is witnessing the wonders of the world first-hand, iconic landmarks, natural beauty, vibrant cities and hidden gems. Every place has its own story, rhythm and magic, making each journey a once-in-a-lifetime opportunity to learn and grow.
 </p>
-
-   
+</div>
+<div class="post">
+<h2>Journeys So Far and Bucket List</h2>
+<p>
+I have had the chance to travel to Singapore and Dubai, experiences that broadened my perspective and deepened my love for travel. From modern skylines to diverse cultures, these trips offered unforgettable moments and lasting memories.
+A Europe tour sits high on my bucket list. The thought of wandering through historic streets, experiencing diverse cultures and embracing the charm of different countries feels incredibly exciting. It is not just about ticking destinations off a list, it is about soaking in experiences that stay with you forever.
+</p>
+</div>
+<div class="post">
+<h2>Independence and Experience</h2>
+<p>
+Travelling also symbolizes independence for me, living abroad, navigating life on my own and learning through real-world experiences. Each journey brings growth, confidence and a deeper understanding of both the world and myself.
+</p>
+</div>
+<div class="post">
+<h2>Memories and Rejuvenation</h2>
+<p>
+Above all, travel is a way to rejuvenate. These breaks from routine help reset the mind, spark creativity and create memories worth cherishing. Every trip adds a new chapter to life, filled with adventure, learning and moments that make living truly meaningful.
+</p>
+</div>
 </div>
 
 </body>
 </html>
+
 

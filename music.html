@@ -79,14 +79,16 @@ header h1 {
     display: flex;
     justify-content: center;
     gap: 30px;
-    margin-bottom: 50px;
+    margin-bottom: 5px;
 }
 
-.image-row img {
-    width: 180px;
-    height: 130px;
-    object-fit: cover;
-}
+img {
+            width: 300px;
+            height: 250px;
+            margin: 50px 0;
+            
+        }
+
 
 /* ===== POST CARDS (WHITE BOXES) ===== */
 .post {
@@ -120,11 +122,13 @@ header h1 {
     font-size: 18px;
 }
 
-/* Color-coded headings */
-.post:nth-child(3) h2 { color: #1e88e5; }
-.post:nth-child(4) h2 { color: #9c27b0; }
-.post:nth-child(5) h2 { color: #ff9800; }
+.post:nth-of-type(odd) h2 {
+    color: #e91e63;   /* pink */
+}
 
+.post:nth-of-type(even) h2 {
+    color: #4caf50;   /* green */
+}
 .post h2 {
     margin-top: 0;
     font-size: 26px;
@@ -142,6 +146,7 @@ header h1 {
     color: #333;
 }
 </style>
+
 
 
 </head>
@@ -190,6 +195,7 @@ Some English pop artists I enjoy listening to include Taylor Swift, Ed Sheeran, 
 Music is not just something I listen to, it is something I like to explore. I have tried playing instruments like the piano, xylophone, harmonium and violin, during my school days. Learning instruments feels exciting and creative, offering a hands-on way to understand music and spend time meaningfully.
 </p>
 </div>
+  <div class="post">
 <h2>A Creative and Peaceful Pastime</h2>
 <p>
 For me, music is more than entertainment. It is a peaceful habit, a creative outlet and a way to express emotion without words. Whether listening, learning or experimenting with instruments, music remains a beautiful way to enjoy time, nurture talent and stay connected to what feels good.
@@ -198,6 +204,7 @@ For me, music is more than entertainment. It is a peaceful habit, a creative out
 </div>
 </body>
 </html>
+
 
 
 

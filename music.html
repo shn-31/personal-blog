@@ -13,32 +13,131 @@
     <meta charset="UTF-8">
     <title>Music</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', sans-serif;
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-            color: white;
-        }
+<style>
+/* ===== ROOT COLORS ===== */
+:root {
+    --primary: #1e88e5;
+    --secondary: #9c27b0;
+    --accent: #ff9800;
+    --dark: #0f2027;
+    --light-bg: #f5f7fa;
+}
 
-        nav {
-            background: #0a1a2f;
-            padding: 15px;
-            text-align: center;
-        }
+/* ===== BODY ===== */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 20px;
-        }
+/* ===== NAVBAR ===== */
+nav {
+    background: linear-gradient(to right, #141e30, #243b55);
+    padding: 16px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
 
-        .content {
-            width: 80%;
-            margin: auto;
-            padding: 40px 0;
-            text-align: center;
-        }
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 22px;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 8px 14px;
+    border-radius: 20px;
+    transition: background 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+    color: white;
+}
+
+/* ===== HEADER ===== */
+header {
+    background: linear-gradient(120deg, #1e3c72, #2a5298, #9c27b0);
+    color: white;
+    padding: 90px 20px;
+    text-align: center;
+    clip-path: ellipse(120% 100% at 50% 0%);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 50px;
+    letter-spacing: 2px;
+}
+
+header p {
+    margin-top: 15px;
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* ===== CONTENT AREA ===== */
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 60px 0;
+}
+
+/* ===== POST CARDS ===== */
+.post {
+    background: white;
+    border-radius: 20px;
+    padding: 35px;
+    margin-bottom: 45px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+    position: relative;
+    transition: transform 0.35s ease;
+}
+
+/* Floating gradient badge */
+.post::after {
+    content: "★";
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    background: linear-gradient(to right, var(--accent), var(--secondary));
+    color: white;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+/* Hover effect */
+.post:hover {
+    transform: translateY(-12px);
+}
+
+/* Color-coded headings */
+.post:nth-child(1) h2 { color: #1e88e5; }
+.post:nth-child(2) h2 { color: #9c27b0; }
+.post:nth-child(3) h2 { color: #ff9800; }
+
+.post h2 {
+    margin-top: 0;
+    font-size: 26px;
+}
+
+.date {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 12px;
+}
+
+.post p {
+    font-size: 16px;
+    line-height: 1.9;
+    color: #333;
+}
 img {
             width: 300px;
             height: 250px;
@@ -46,31 +145,60 @@ img {
             
         }
 
-    </style>
+</style>
+
 </head>
 
 <body>
 
 <nav>
-    <a href="blog.html">Home</a>
+    <a href="index.html">Home</a>
     <a href="music.html">Music</a>
     <a href="travel.html">Travel</a>
 <a href="reading.html">Reading</a>
 </nav>
 <div class="content">
-<h1>Music</h1>
 <img src="2.jpg" >
 <img src="1.jpg" >
 <img src="3.jpg" >
+<!-- Header -->
+<header>
+<h1>Music</h1>
+</header>
+<!-- Blog Content -->
+<div class="container">
+<div class="post">
+<h2>An Escapism</h2>
 <p>
-Music provides instant enjoyment and escapism, uplifting spirits and transforming moods through diverse genres and styles.
-It acts as a stress reliever and mood booster, helping people relax, focus or even energize themselves during monotonous routines.
+Music is my go-to escape from everyday noise and overthinking. It has a calming effect on my mind and brings a quiet sense of peace. No matter how the day has been, music helps me pause, breathe and feel present in the moment.
 </p>
+</div>
+<div class="post">
+<h2>Mood, Emotion and Energy</h2>
 <p>
-There are different ways in which music can be used as a source of entertainment. One can sing songs or even play instruments, as well as
-listen to various artists playing music.
-</p>   
+One of the most beautiful things about music is how effortlessly it changes my mood. Slow, soft melodies help me relax and unwind, while high-energy beats instantly lift my spirit. Whether I need comfort, motivation or pure joy, there is always a song that fits the feeling.
+</p>
+</div>
+<div class="post">
+<h2>My Kind of Sound</h2>
+<p>
+I enjoy English music across almost every genre, there are no strict boundaries. From calm, soulful tracks to full-on party anthems, I enjoy the variety. I am especially drawn to songs from the 2010s era, which feel nostalgic yet timeless and continue to resonate deeply.
+Some English pop artists I enjoy listening to include Taylor Swift, Ed Sheeran, Shawn Mendes and similar artists. Their music feels honest, emotional and relatable songs that stay with you long after they end.
+</p>
+</div>
+<div class="post">
+<h2>Exploring Beyond Listening</h2>
+<p>
+Music is not just something I listen to, it is something I like to explore. I have tried playing instruments like the piano, xylophone, harmonium and violin, during my school days. Learning instruments feels exciting and creative, offering a hands-on way to understand music and spend time meaningfully.
+</p>
+</div>
+<h2>A Creative and Peaceful Pastime</h2>
+<p>
+For me, music is more than entertainment. It is a peaceful habit, a creative outlet and a way to express emotion without words. Whether listening, learning or experimenting with instruments, music remains a beautiful way to enjoy time, nurture talent and stay connected to what feels good.
+</p>
+</div>
 </div>
 </body>
 </html>
+
 

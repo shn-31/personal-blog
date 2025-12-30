@@ -207,7 +207,10 @@
 
         <!-- CTA -->
         <div class="cta">
-            <button id="interestBtn">I’m In 🎶</button>
+           <button id="interestBtn" type="button">
+    I’m In 🎶
+</button>
+
             <div class="cta-note">
                 Click to register interest
             </div>
@@ -223,13 +226,31 @@
 
 <!-- SIMPLE INTEREST TRACKING (NO EXTERNAL TOOLS) -->
 <script>
-document.getElementById("interestBtn").addEventListener("click", function () {
-    gtag('event', 'cta_click');
+document.addEventListener("DOMContentLoaded", function () {
+    var btn = document.getElementById("interestBtn");
+
+    if (!btn) {
+        console.log("CTA button not found");
+        return;
+    }
+
+    btn.addEventListener("click", function () {
+        console.log("CTA clicked");
+
+        gtag('event', 'cta_click', {
+            event_category: 'campaign',
+            event_label: 'online_music_meetup'
+        });
+
+        alert("Thanks! Your interest has been recorded 🎶");
+    });
 });
 </script>
 
+
 </body>
 </html>
+
 
 
 
